@@ -46,6 +46,7 @@ function Inquiry() {
         draggable
         hideProgressBar={false}
         newestOnTop={true}
+        
         theme="dark"
       />
 
@@ -144,7 +145,15 @@ function Inquiry() {
                 name="location"
                 register={register}
                 errors={errors}
-                options={["Ahmedabad", "Surat", "Rajkot", "Vadodara"]}
+                options={[
+                  "Ahmedabad",
+                  "Surat",
+                  "Rajkot",
+                  "Vadodara",
+                  "Gandhinagar",
+                  "Morbi",
+                  "Bhavnagar",
+                  "Amreli",]}
                 requiredMsg="Select a location"
               />
               <FormInput

@@ -24,7 +24,7 @@ const About = () => {
           <h1 className="text-[6vw] md:text-[2.5vw]  font-medium pb-6">
             Our Approach
           </h1>
-          <button className="flex items-center gap-4 px-6 py-3 hover:text-zinc-100 bg-zinc-900 rounded-full text-white hover:bg-red-600 transition cursor-pointer">
+          <button className="flex items-center gap-4 px-6 py-3 hover:text-zinc-100 bg-zinc-900 rounded-full text-white hover:bg-red-600 cursor-pointer transition duration-700 easy-in-out...">
             Read More
             <div className="w-3 h-3 rounded-full bg-zinc-100"></div>
           </button>

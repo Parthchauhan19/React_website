@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
-import React from "react";
-import { FaArrowUpLong } from "react-icons/fa6";
 import Spline from "@splinetool/react-spline";
-import AOS from "aos";
+
 import "aos/dist/aos.css";
+
 //we use aos for animations fade in or out also
+
 const LandingPage = () => {
   return (
     <div
@@ -18,14 +18,15 @@ const LandingPage = () => {
       <div className="textstructure mt-52 px-6 md:px-16">
         <div className="masker">
           <Spline
-            className="absolute top-[-10%] right-[-5%] h-[500px] lg:left-[35%] -z-10 "
+            className="absolute top-[-10%] right-[-5%] h-[500px] lg:left-[35%] -z-10"
             scene="https://prod.spline.design/tLQMNgcq9gLWaW-e/scene.splinecode"
+            // scene="https://prod.spline.design/fWKCfj1k-2OZEpzF/scene.splinecode"
           />
           <h1
             data-aos="fade-right"
             data-aos-offset="300"
             data-aos-easing="ease-in-sine"
-            className="relative z-10 text-[5vw] leading-[6vw] tracking-tighter font-medium"
+            className="relative z-10 text-[5vw] leading-[6vw] tracking-tighter font-medium shine-text"
           >
             YOUR DREAM
           </h1>
@@ -55,7 +56,7 @@ const LandingPage = () => {
               data-aos="fade-right"
               data-aos-offset="400"
               data-aos-easing="ease-in-sine"
-              className="text-[5vw] leading-[6vw] tracking-tighter font-medium"
+              className="text-[5vw] leading-[6vw] tracking-tighter font-medium shine-text"
             >
               TURN'S IN TO REALITY
             </h1>
@@ -70,7 +71,7 @@ const LandingPage = () => {
             data-aos="fade-right"
             data-aos-offset="500"
             data-aos-easing="ease-in-sine"
-            className="text-[5vw] leading-[6vw] tracking-tighter font-medium"
+            className="text-[5vw] leading-[6vw] tracking-tighter font-medium shine-text"
           >
             TRUST ON US
           </h1>
@@ -96,7 +97,7 @@ const LandingPage = () => {
           </p>
         ))}
 
-        {/* Buttons */}
+        {/* Contact Button Only */}
         <div className="start flex items-center gap-5">
           <div
             data-aos="fade-up"
@@ -106,22 +107,9 @@ const LandingPage = () => {
           >
             Contact Us
           </div>
-          <div
-            className="w-10 h-10 border-[1px] border-zinc-400 flex items-center justify-center rounded-full 
-              transition-all duration-300 ease-in-out hover:border-red-600 hover:text-red-600"
-          >
-            <span
-              data-aos="fade-up"
-              data-aos-duration="3000"
-              className="-rotate-45"
-            >
-              <FaArrowUpLong />
-            </span>
-          </div>
         </div>
       </div>
     </div>
   );
 };
-
 export default LandingPage;
