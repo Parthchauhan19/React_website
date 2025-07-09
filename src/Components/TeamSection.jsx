@@ -1,6 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const TeamSection = () => {
+  useEffect(() => {
+    AOS.init({ duration: 800, once: true });
+  }, []);
+
   const teamMembers = [
     {
       id: 1,
@@ -14,7 +20,7 @@ const TeamSection = () => {
     },
     {
       id: 2,
-      name: "Zeel Patel",
+      name: "Dhruval Gondaliya",
       role: "Real Estate Agent",
       company: "Somish Realty Pvt Ltd",
       nameColor: "text-red-500",
@@ -24,11 +30,11 @@ const TeamSection = () => {
     },
     {
       id: 3,
-      name: "Soham Patel",
+      name: "Jagruti Mendha",
       role: "Real Estate Agent",
       company: "Somish Realty Pvt Ltd",
       nameColor: "text-red-500",
-      avatar: "👨‍💼",
+      avatar: "👩‍💼",
       description:
         "Somish Realty Private Limited is a Real Estate Property Management Company has been serving...",
     },
@@ -44,7 +50,7 @@ const TeamSection = () => {
     },
     {
       id: 5,
-      name: "Vanita Patel",
+      name: "Keval Bhavsar",
       role: "Operation Manager",
       company: "Somish Realty Pvt Ltd",
       nameColor: "text-red-500",
@@ -54,7 +60,7 @@ const TeamSection = () => {
     },
     {
       id: 6,
-      name: "Zeel Patel",
+      name: "Bharat Chauhan",
       role: "Real Estate Agent",
       company: "Somish Realty Pvt Ltd",
       nameColor: "text-red-500",
@@ -64,7 +70,7 @@ const TeamSection = () => {
     },
     {
       id: 7,
-      name: "Soham Patel",
+      name: "Soham Nakrani",
       role: "Real Estate Agent",
       company: "Somish Realty Pvt Ltd",
       nameColor: "text-red-500",
@@ -74,7 +80,7 @@ const TeamSection = () => {
     },
     {
       id: 8,
-      name: "Mishay Patel",
+      name: "Vivek Patel",
       role: "Real Estate Agent",
       company: "Somish Realty Pvt Ltd",
       nameColor: "text-red-500",
@@ -91,32 +97,24 @@ const TeamSection = () => {
     <div className="flex justify-center flex-wrap gap-8 mb-8">
       {members.map((member) => (
         <div
+          data-aos="jump-in"
           key={member.id}
           className="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden relative"
           style={{ width: "280px", height: "420px" }}
         >
           <div className="p-6 text-center h-full flex flex-col justify-between">
-            {/* Avatar */}
             <div className="w-24 h-24 mx-auto mb-6 bg-gray-200 rounded-full flex items-center justify-center text-4xl shadow-sm">
               {member.avatar}
             </div>
-
-            {/* Name */}
             <h3 className={`text-xl font-semibold mb-3 ${member.nameColor}`}>
               {member.name}
             </h3>
-
-            {/* Role and Company */}
             <p className="text-gray-700 font-medium text-sm mb-6">
               {member.role}, {member.company}
             </p>
-
-            {/* Description */}
             <p className="text-gray-600 text-sm leading-relaxed px-2 mb-8">
               "{member.description}"
             </p>
-
-            {/* Button */}
             <button className="bg-red-500 hover:bg-red-600 text-white px-8 py-3 rounded-md font-medium transition-colors duration-200 text-sm">
               View Profile
             </button>
@@ -127,20 +125,23 @@ const TeamSection = () => {
   );
 
   return (
-    <div className="min-h-screen bg-[#212121] mt-40 py-16 px-4">
+    <div
+      data-aos="fade-up-left"
+      data-aos-offset="300"
+      data-aos-delay="500"
+      data-aos-easing="ease-in-sine"
+      className="min-h-screen bg-[#212121] mt-40 py-16 px-4"
+    >
       <div className="max-w-7xl mx-auto">
-        {/* Header Section */}
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold text-zinc-100 mb-4">
             Meet Our <span className="text-red-600">Team</span>
           </h1>
           <p className="text-gray-400 text-lg">
-            We have Best Real Estate Professional Agents / Dealers for Real Estate
-            Property Services.
+            We have Best Real Estate Professional Agents / Dealers for Real
+            Estate Property Services.
           </p>
         </div>
-
-        {/* Team Cards */}
         <div className="space-y-8">
           <TeamRow members={firstRow} />
           {secondRow.length > 0 && <TeamRow members={secondRow} />}

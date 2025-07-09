@@ -2,19 +2,28 @@ import { motion } from "framer-motion";
 import { useForm } from "react-hook-form";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
-function Inquirey() {
+function Inquiry() {
   const {
     register,
     handleSubmit,
     trigger,
+    reset,
     formState: { errors, isSubmitting },
   } = useForm();
+
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
 
   const onSubmit = async (data) => {
     await new Promise((resolve) => setTimeout(resolve, 2000));
     console.log("Submitted Data:", data);
     toast.success("Your request is sent");
+    reset(); // clear form after submission
   };
 
   const handleValidateAndSubmit = async (e) => {
@@ -29,14 +38,24 @@ function Inquirey() {
 
   return (
     <>
-      <ToastContainer position="top-right" autoClose={3000} />
+      <ToastContainer
+        position="top-right"
+        autoClose={4000}
+        closeOnClick
+        pauseOnHover
+        draggable
+        hideProgressBar={false}
+        newestOnTop={true}
+        theme="dark"
+      />
 
       <div
+        data-aos="fade-up"
         className="min-h-screen bg-cover bg-center bg-no-repeat flex items-center justify-center px-4 mt-10"
         style={{ backgroundImage: `url('./images/bg-form.png')` }}
       >
         <motion.div
-          className="max-w-[700px] w-full p-6 rounded-xl bg-[#212121]/90 backdrop-blur-md text-white"
+          className="max-w-[700px] w-full p-6 rounded-xl bg-[#212121]/90 backdrop-blur-md text-white shadow-2xl"
           animate={{
             boxShadow: [
               "0 0 0px rgba(255,255,255,0)",
@@ -57,218 +76,130 @@ function Inquirey() {
 
           <form onSubmit={handleValidateAndSubmit}>
             {/* Inquiry Type */}
-            <div className="mb-5">
-              <label className="block font-semibold mb-1">Inquiry Type:</label>
-              <select
-                {...register("inquiryType", {
-                  required: "Inquiry type is required",
-                })}
-                className={`w-full p-2 border rounded bg-[#212121] text-white ${
-                  errors.inquiryType ? "border-red-500" : "border-gray-300"
-                }`}
-              >
-                <option value="">Select</option>
-                <option value="Buy">Buy</option>
-                <option value="Sell">Sell</option>
-                <option value="Rent">Rent</option>
-              </select>
-              {errors.inquiryType && (
-                <p className="text-[#f93b3b] text-sm mt-1">
-                  {errors.inquiryType.message}
-                </p>
-              )}
-            </div>
+            <FormSelect
+              label="Inquiry Type"
+              name="inquiryType"
+              register={register}
+              errors={errors}
+              options={["Buy", "Sell", "Rent"]}
+              requiredMsg="Inquiry type is required"
+            />
 
             {/* I’m a... */}
-            <div className="mb-5">
-              <label className="block font-semibold mb-1">I’m a:</label>
-              <select
-                {...register("userType", {
-                  required: "Please select your role",
-                })}
-                className={`w-full p-2 border rounded bg-[#212121] text-white ${
-                  errors.userType ? "border-red-500" : "border-gray-300"
-                }`}
-              >
-                <option value="">Select</option>
-                <option value="Owner">Owner</option>
-                <option value="Agent">Agent</option>
-                <option value="Buyer">Buyer</option>
-                <option value="Investor">Investor</option>
-              </select>
-              {errors.userType && (
-                <p className="text-[#f93b3b] text-sm mt-1">
-                  {errors.userType.message}
-                </p>
-              )}
-            </div>
+            <FormSelect
+              label="I’m a"
+              name="userType"
+              register={register}
+              errors={errors}
+              options={["Owner", "Agent", "Buyer", "Investor"]}
+              requiredMsg="Please select your role"
+            />
 
-            {/* First & Middle Name */}
+            {/* Name Fields */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-5">
-              <div>
-                <label className="block font-semibold mb-1">First Name:</label>
-                <input
-                  {...register("firstName", {
-                    required: "First name is required",
-                    minLength: { value: 3, message: "Min 3 chars" },
-                    maxLength: { value: 8, message: "Max 8 chars" },
-                  })}
-                  className={`w-full p-2 border rounded bg-[#212121] text-white ${
-                    errors.firstName ? "border-red-500" : "border-gray-300"
-                  }`}
-                />
-                {errors.firstName && (
-                  <p className="text-[#f93b3b] text-sm mt-1">
-                    {errors.firstName.message}
-                  </p>
-                )}
-              </div>
-
-              <div>
-                <label className="block font-semibold mb-1">Middle Name:</label>
-                <input
-                  {...register("middleName", {
-                    required: "Middle name is required",
-                    minLength: { value: 3, message: "Min 3 chars" },
-                    maxLength: { value: 15, message: "Max 15 chars" },
-                  })}
-                  className={`w-full p-2 border rounded bg-[#212121] text-white ${
-                    errors.middleName ? "border-red-500" : "border-gray-300"
-                  }`}
-                />
-                {errors.middleName && (
-                  <p className="text-[#f93b3b] text-sm mt-1">
-                    {errors.middleName.message}
-                  </p>
-                )}
-              </div>
+              <FormInput
+                label="First Name"
+                name="firstName"
+                register={register}
+                errors={errors}
+                rules={{
+                  required: "First name is required",
+                  minLength: { value: 3, message: "Min 3 chars" },
+                  maxLength: { value: 8, message: "Max 8 chars" },
+                }}
+              />
+              <FormInput
+                label="Middle Name"
+                name="middleName"
+                register={register}
+                errors={errors}
+                rules={{
+                  required: "Middle name is required",
+                  minLength: { value: 3, message: "Min 3 chars" },
+                  maxLength: { value: 15, message: "Max 15 chars" },
+                }}
+              />
             </div>
 
             {/* Email */}
-            <div className="mb-5">
-              <label className="block font-semibold mb-1">Email Address:</label>
-              <input
-                type="email"
-                {...register("email", {
-                  required: "Email is required",
-                  pattern: {
-                    value: /^\S+@\S+$/i,
-                    message: "Invalid email",
-                  },
-                })}
-                className={`w-full p-2 border rounded bg-[#212121] text-white ${
-                  errors.email ? "border-red-500" : "border-gray-300"
-                }`}
-              />
-              {errors.email && (
-                <p className="text-[#f93b3b] text-sm mt-1">
-                  {errors.email.message}
-                </p>
-              )}
-            </div>
+            <FormInput
+              label="Email Address"
+              name="email"
+              type="email"
+              register={register}
+              errors={errors}
+              rules={{
+                required: "Email is required",
+                pattern: {
+                  value: /^\S+@\S+$/i,
+                  message: "Invalid email",
+                },
+              }}
+            />
 
-            {/* Location & Zip Code */}
+            {/* Location and Zip */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-5">
-              <div>
-                <label className="block font-semibold mb-1">Location:</label>
-                <select
-                  {...register("location", { required: "Select a location" })}
-                  className={`w-full p-2 border rounded bg-[#212121] text-white ${
-                    errors.location ? "border-red-500" : "border-gray-300"
-                  }`}
-                >
-                  <option value="">Select</option>
-                  <option value="Ahmedabad">Ahmedabad</option>
-                  <option value="Surat">Surat</option>
-                  <option value="Rajkot">Rajkot</option>
-                  <option value="Vadodara">Vadodara</option>
-                </select>
-                {errors.location && (
-                  <p className="text-[#f93b3b] text-sm mt-1">
-                    {errors.location.message}
-                  </p>
-                )}
-              </div>
-
-              <div>
-                <label className="block font-semibold mb-1">Zip Code:</label>
-                <input
-                  type="text"
-                  {...register("zip", {
-                    required: "Zip code is required",
-                    pattern: {
-                      value: /^[0-9]{6}$/,
-                      message: "Enter valid 6-digit zip",
-                    },
-                  })}
-                  className={`w-full p-2 border rounded bg-[#212121] text-white ${
-                    errors.zip ? "border-red-500" : "border-gray-300"
-                  }`}
-                />
-                {errors.zip && (
-                  <p className="text-[#f93b3b] text-sm mt-1">
-                    {errors.zip.message}
-                  </p>
-                )}
-              </div>
+              <FormSelect
+                label="Location"
+                name="location"
+                register={register}
+                errors={errors}
+                options={["Ahmedabad", "Surat", "Rajkot", "Vadodara"]}
+                requiredMsg="Select a location"
+              />
+              <FormInput
+                label="Zip Code"
+                name="zip"
+                register={register}
+                errors={errors}
+                rules={{
+                  required: "Zip code is required",
+                  pattern: {
+                    value: /^[0-9]{6}$/,
+                    message: "Enter valid 6-digit zip",
+                  },
+                }}
+              />
             </div>
 
             {/* Property Type */}
-            <div className="mb-5">
-              <label className="block font-semibold mb-1">Property Type:</label>
-              <select
-                {...register("propertyType", {
-                  required: "Select a property type",
-                })}
-                className={`w-full p-2 border rounded bg-[#212121] text-white ${
-                  errors.propertyType ? "border-red-500" : "border-gray-300"
-                }`}
-              >
-                <option value="">Select type</option>
-                <option value="Commercial">Commercial</option>
-                <option value="Office Space">- Office Space</option>
-                <option value="Shop / Showroom">- Shop / Showroom</option>
-                <option value="Residential">Residential</option>
-                <option value="Bungalows / Villa">- Bungalows / Villa</option>
-                <option value="Flats/Apartments">- Flats/Apartments</option>
-                <option value="Penthouse">- Penthouse</option>
-                <option value="Plot / Land">- Plot / Land</option>
-                <option value="Studio">- Studio</option>
-                <option value="Weekend Plot/Bungalow">
-                  - Weekend Plot/Bungalow
-                </option>
-              </select>
-              {errors.propertyType && (
-                <p className="text-[#f93b3b] text-sm mt-1">
-                  {errors.propertyType.message}
-                </p>
-              )}
-            </div>
+            <FormSelect
+              label="Property Type"
+              name="propertyType"
+              register={register}
+              errors={errors}
+              options={[
+                "Commercial",
+                "Office Space",
+                "Shop / Showroom",
+                "Residential",
+                "Bungalows / Villa",
+                "Flats/Apartments",
+                "Penthouse",
+                "Plot / Land",
+                "Studio",
+                "Weekend Plot/Bungalow",
+              ]}
+              requiredMsg="Select a property type"
+            />
 
-            {/* Contact Number */}
-            <div className="mb-5">
-              <label className="block font-semibold mb-1">Contact No:</label>
-              <input
-                type="tel"
-                {...register("contactNo", {
-                  required: "Contact no is required",
-                  minLength: { value: 10, message: "Min 10 digits" },
-                  maxLength: { value: 15, message: "Max 15 digits" },
-                  pattern: {
-                    value: /^[0-9]+$/,
-                    message: "Only digits allowed",
-                  },
-                })}
-                className={`w-full p-2 border rounded bg-[#212121] text-white ${
-                  errors.contactNo ? "border-red-500" : "border-gray-300"
-                }`}
-              />
-              {errors.contactNo && (
-                <p className="text-[#f93b3b] text-sm mt-1">
-                  {errors.contactNo.message}
-                </p>
-              )}
-            </div>
+            {/* Contact No */}
+            <FormInput
+              label="Contact No"
+              name="contactNo"
+              type="tel"
+              register={register}
+              errors={errors}
+              rules={{
+                required: "Contact no is required",
+                minLength: { value: 10, message: "Min 10 digits" },
+                maxLength: { value: 15, message: "Max 15 digits" },
+                pattern: {
+                  value: /^[0-9]+$/,
+                  message: "Only digits allowed",
+                },
+              }}
+            />
 
             {/* Message */}
             <div className="mb-5">
@@ -290,7 +221,7 @@ function Inquirey() {
               )}
             </div>
 
-            {/* Submit */}
+            {/* Submit Button */}
             <button
               type="submit"
               disabled={isSubmitting}
@@ -309,4 +240,51 @@ function Inquirey() {
   );
 }
 
-export default Inquirey;
+// Reusable Input Component
+const FormInput = ({ label, name, type = "text", register, errors, rules }) => (
+  <div>
+    <label className="block font-semibold mb-1">{label}:</label>
+    <input
+      type={type}
+      {...register(name, rules)}
+      className={`w-full p-2 border rounded bg-[#212121] text-white ${
+        errors[name] ? "border-red-500" : "border-gray-300"
+      }`}
+    />
+    {errors[name] && (
+      <p className="text-[#f93b3b] text-sm mt-1">{errors[name].message}</p>
+    )}
+  </div>
+);
+
+// Reusable Select Component
+const FormSelect = ({
+  label,
+  name,
+  register,
+  errors,
+  options,
+  requiredMsg,
+}) => (
+  <div className="mb-5">
+    <label className="block font-semibold mb-1">{label}:</label>
+    <select
+      {...register(name, { required: requiredMsg })}
+      className={`w-full p-2 border rounded bg-[#212121] text-white ${
+        errors[name] ? "border-red-500" : "border-gray-300"
+      }`}
+    >
+      <option value="">Select</option>
+      {options.map((option, index) => (
+        <option key={index} value={option}>
+          {option}
+        </option>
+      ))}
+    </select>
+    {errors[name] && (
+      <p className="text-[#f93b3b] text-sm mt-1">{errors[name].message}</p>
+    )}
+  </div>
+);
+
+export default Inquiry;

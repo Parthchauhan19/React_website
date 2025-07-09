@@ -1,8 +1,17 @@
 import React from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const About = () => {
   return (
-    <div className="w-full bg-[#212121]] px-6 md:px-20 py-12 md:py-20 rounded-tl-3xl rounded-tr-3xl text-zinc-100 transition-colors duration-300 hover:bg-green-400 hover:text-zinc-900 ">
+    <div
+      // data-aos="zoom-out-right"
+      data-aos="fade-right"
+      data-aos-offset="400"
+      data-aos-duration="1500"
+      data-aos-easing="ease-in-sine"
+      className="w-full bg-[#212121]] px-6 md:px-20 py-12 md:py-20 rounded-tl-3xl rounded-tr-3xl text-zinc-100 transition-colors duration-300  "
+    >
       <h1 className="font-medium capitalize text-[5vw] md:text-[2.5vw] leading-[6vw] md:leading-[3.5vw] tracking-tight transition-colors duration-300 ">
         At Ochi Reality, we don’t just find properties — we find homes. With a
         focus on trust, transparency, and personalized service, we help you make

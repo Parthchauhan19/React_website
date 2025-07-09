@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Eyes = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -84,7 +86,13 @@ const Eyes = () => {
   };
 
   return (
-    <div className="max-w-[90vw] h-1/2 mx-auto px-4 py-8 pb-25 ">
+    <div
+      data-aos="fade-left"
+      data-aos-offset="300"
+      data-aos-delay="500"
+      data-aos-easing="ease-in-sine"
+      className="max-w-[90vw] h-1/2 mx-auto px-4 py-8 pb-25 "
+    >
       <div className="mb-8">
         <h2 className="text-4xl font-bold text-zinc-100 mb-2 uppercase">
           Prominent Projects

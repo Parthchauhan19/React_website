@@ -10,6 +10,8 @@ import Slider2 from "./Components/Slider2";
 import Fotlast from "./Footer/Fotlast";
 import TeamSection from "./Components/TeamSection";
 import { ToastContainer } from "react-toastify";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const App = () => {
   const locomotiveScroll = new LocomotiveScroll();

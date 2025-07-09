@@ -1,0 +1,7 @@
+[data-aos="jump-in"] {
+  @apply opacity-0 transform scale-50 translate-y-[100px];
+}
+
+[data-aos="jump-in"].aos-animate {
+  @apply animate-jump-in;
+}

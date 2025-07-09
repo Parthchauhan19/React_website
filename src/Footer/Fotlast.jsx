@@ -1,10 +1,24 @@
 import React from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function Folast() {
   return (
-    <footer className="bg-neutral-100 text-center text-neutral-600  pt-5 dark:bg-neutral-700 dark:text-neutral-200 lg:text-left font-nunito">
-      <div className="flex items-center justify-center border-b-2 border-neutral-200 p-6 dark:border-neutral-500 lg:justify-between">
-        <div className="mr-12 hidden lg:block capitalize font-nunito">
+    <footer
+      data-aos="fade-up"
+      data-aos-duration="3000"
+      className="bg-neutral-100 text-center text-neutral-600  pt-5 dark:bg-neutral-700 dark:text-neutral-200 lg:text-left font-nunito"
+    >
+      <div
+        data-aos="zoom-in-up"
+        data-aos-duration="2000"
+        className="flex items-center justify-center border-b-2 border-neutral-200 p-6 dark:border-neutral-500 lg:justify-between"
+      >
+        <div
+          data-aos="zoom-in-up"
+          data-aos-duration="2000"
+          className="mr-12 hidden lg:block capitalize font-nunito"
+        >
           <span>
             Get connected with us on{" "}
             <span className="text-zinc-100 font-medium capitalize">
@@ -13,7 +27,11 @@ export default function Folast() {
           </span>
         </div>
         {/* <!-- Social network icons container --> */}
-        <div className="flex justify-center">
+        <div
+          data-aos="zoom-in-up"
+          data-aos-duration="2000"
+          className="flex justify-center"
+        >
           <a className="mr-6 text-neutral-400 dark:text-neutral-200 hover:text-red-500 cursor-pointer">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -86,7 +104,11 @@ export default function Folast() {
         <div className="grid-1 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           {/* <!-- TW Elements section --> */}
           <div className="">
-            <h6 className="mb-4 flex items-center justify-center font-semibold uppercase md:justify-start gap-3">
+            <h6
+              data-aos="zoom-in-up"
+              data-aos-duration="2000"
+              className="mb-4 flex items-center justify-center font-semibold uppercase md:justify-start gap-3"
+            >
               <svg
                 width="72"
                 height="30"
@@ -117,13 +139,13 @@ export default function Folast() {
               </svg>
               <span className="text-zinc-100">" Ochi Reality "</span>
             </h6>
-            <p>
+            <p data-aos="zoom-in-up" data-aos-duration="2000">
               All rights reserved. Your trusted partner in real estate. Follow
               us on social media for the latest updates.
             </p>
           </div>
           {/* <!-- Products section --> */}
-          <div className="">
+          <div data-aos="zoom-in-up" data-aos-duration="2000" className="">
             <h6 className="mb-4 flex justify-center font-semibold uppercase md:justify-start">
               Products
             </h6>
@@ -149,7 +171,7 @@ export default function Folast() {
             </p>
           </div>
           {/* <!-- Useful links section --> */}
-          <div className="">
+          <div data-aos="zoom-in-up" data-aos-duration="2000" className="">
             <h6 className="mb-4 flex justify-center font-semibold uppercase md:justify-start">
               Useful links
             </h6>
@@ -175,7 +197,7 @@ export default function Folast() {
             </p>
           </div>
           {/* <!-- Contact section --> */}
-          <div>
+          <div data-aos="zoom-in-up" data-aos-duration="2000" className="">
             <h6 className="mb-4 flex justify-center font-semibold uppercase md:justify-start">
               Contact
             </h6>

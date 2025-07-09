@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Slider2 = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -84,7 +86,13 @@ const Slider2 = () => {
   };
 
   return (
-    <div className="max-w-[90vw] h-1/2 mx-auto px-4 py-8 ">
+    <div
+      data-aos="fade-right"
+      data-aos-offset="300"
+      data-aos-delay="500"
+      data-aos-easing="ease-in-sine"
+      className="max-w-[90vw] h-1/2 mx-auto px-4 py-8 "
+    >
       {/* Slider Container */}
       <div className="relative">
         {/* Main Slider */}
