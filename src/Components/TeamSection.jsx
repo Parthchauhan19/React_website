@@ -12,81 +12,81 @@ const TeamSection = () => {
       id: 1,
       name: "Vanita Patel",
       role: "Operation Manager",
-      company: "Somish Realty Pvt Ltd",
+      company: "Ochi Realty Pvt Ltd",
       nameColor: "text-red-500",
       avatar: "👩‍💼",
       description:
-        "Somish Realty Private Limited is a Real Estate Property Management Company has been serving...",
+        "Ochi Realty Private Limited is a Real Estate Property Management Company has been serving...",
     },
     {
       id: 2,
       name: "Dhruval Gondaliya",
       role: "Real Estate Agent",
-      company: "Somish Realty Pvt Ltd",
+      company: "Ochi Realty Pvt Ltd",
       nameColor: "text-red-500",
       avatar: "👨‍💼",
       description:
-        "Somish Realty Private Limited is a Real Estate Property Management Company has been serving...",
+        "Ochi Realty Private Limited is a Real Estate Property Management Company has been serving...",
     },
     {
       id: 3,
       name: "Jagruti Mendha",
       role: "Real Estate Agent",
-      company: "Somish Realty Pvt Ltd",
+      company: "Ochi Realty Pvt Ltd",
       nameColor: "text-red-500",
       avatar: "👩‍💼",
       description:
-        "Somish Realty Private Limited is a Real Estate Property Management Company has been serving...",
+        "Ochi Realty Private Limited is a Real Estate Property Management Company has been serving...",
     },
     {
       id: 4,
       name: "Mishay Patel",
       role: "Real Estate Agent",
-      company: "Somish Realty Pvt Ltd",
+      company: "Ochi Realty Pvt Ltd",
       nameColor: "text-red-500",
       avatar: "👨‍💼",
       description:
-        "Somish Realty Private Limited is a Real Estate Property Management Company has been serving...",
+        "Ochi Realty Private Limited is a Real Estate Property Management Company has been serving...",
     },
     {
       id: 5,
       name: "Keval Bhavsar",
       role: "Operation Manager",
-      company: "Somish Realty Pvt Ltd",
+      company: "Ochi Realty Pvt Ltd",
       nameColor: "text-red-500",
       avatar: "👩‍💼",
       description:
-        "Somish Realty Private Limited is a Real Estate Property Management Company has been serving...",
+        "Ochi Realty Private Limited is a Real Estate Property Management Company has been serving...",
     },
     {
       id: 6,
       name: "Bharat Chauhan",
       role: "Real Estate Agent",
-      company: "Somish Realty Pvt Ltd",
+      company: "Ochi Realty Pvt Ltd",
       nameColor: "text-red-500",
       avatar: "👨‍💼",
       description:
-        "Somish Realty Private Limited is a Real Estate Property Management Company has been serving...",
+        "Ochi Realty Private Limited is a Real Estate Property Management Company has been serving...",
     },
     {
       id: 7,
       name: "Soham Nakrani",
       role: "Real Estate Agent",
-      company: "Somish Realty Pvt Ltd",
+      company: "Ochi Realty Pvt Ltd",
       nameColor: "text-red-500",
       avatar: "👨‍💼",
       description:
-        "Somish Realty Private Limited is a Real Estate Property Management Company has been serving...",
+        "Ochi Realty Private Limited is a Real Estate Property Management Company has been serving...",
     },
     {
       id: 8,
       name: "Vivek Patel",
       role: "Real Estate Agent",
-      company: "Somish Realty Pvt Ltd",
+      company: "Ochi Realty Pvt Ltd",
       nameColor: "text-red-500",
       avatar: "👨‍💼",
       description:
-        "Somish Realty Private Limited is a Real Estate Property Management Company has been serving...",
+        "Ochi Realty Private Limited is a Real Estate Property Management Company has been serving...",
     },
   ];
 
@@ -94,7 +94,13 @@ const TeamSection = () => {
   const secondRow = teamMembers.slice(4);
 
   const TeamRow = ({ members }) => (
-    <div className="flex justify-center flex-wrap gap-8 mb-8">
+    <div
+      data-aos="fade-up-left"
+      data-aos-offset="300"
+      data-aos-delay="500"
+      data-aos-easing="ease-in-sine"
+      className="flex justify-center flex-wrap gap-8 mb-8"
+    >
       {members.map((member) => (
         <div
           data-aos="jump-in"
@@ -125,29 +131,32 @@ const TeamSection = () => {
   );
 
   return (
-    <div
-      data-aos="fade-up-left"
-      data-aos-offset="300"
-      data-aos-delay="500"
-      data-aos-easing="ease-in-sine"
-      className="min-h-screen bg-[#212121] mt-40 py-16 px-4"
-    >
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-zinc-100 mb-4">
-            Meet Our <span className="text-red-600">Team</span>
-          </h1>
-          <p className="text-gray-400 text-lg">
-            We have Best Real Estate Professional Agents / Dealers for Real
-            Estate Property Services.
-          </p>
-        </div>
-        <div className="space-y-8">
-          <TeamRow members={firstRow} />
-          {secondRow.length > 0 && <TeamRow members={secondRow} />}
+    <>
+      <div
+        id="team"
+        data-aos="fade-up-left"
+        data-aos-offset="300"
+        data-aos-delay="500"
+        data-aos-easing="ease-in-sine"
+        className="min-h-screen bg-[#212121] mt-40 py-16 px-4"
+      >
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-5xl font-bold text-zinc-100 mb-4">
+              Meet Our <span className="text-red-600">Team</span>
+            </h1>
+            <p className="text-gray-400 text-lg">
+              We have Best Real Estate Professional Agents / Dealers for Real
+              Estate Property Services.
+            </p>
+          </div>
+          <div className="space-y-8">
+            <TeamRow members={firstRow} />
+            {secondRow.length > 0 && <TeamRow members={secondRow} />}
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

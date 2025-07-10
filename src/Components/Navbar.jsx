@@ -54,28 +54,31 @@ function Navbar() {
       {/* Navigation Links */}
       <div className="links flex gap-10">
         <a
+          href="#commercial"
           data-aos="fade-down"
           data-aos-easing="linear"
           data-aos-duration="1000"
           className="text-lg capitalize font-medium text-white hover:text-red-600 transition-colors duration-300 cursor-pointer"
         >
-          Services
+          Buy/Commercial
         </a>
         <a
+          href="#rental"
           data-aos="fade-down"
           data-aos-easing="linear"
           data-aos-duration="1200"
           className="text-lg capitalize font-medium text-white hover:text-red-600 transition-colors duration-300 cursor-pointer"
         >
-          Home
+          Rent
         </a>
         <a
+          href="#pg-coliving"
           data-aos="fade-down"
           data-aos-easing="linear"
           data-aos-duration="1400"
           className="text-lg capitalize font-medium text-white hover:text-red-600 transition-colors duration-300 cursor-pointer"
         >
-          About Us
+          pg/co-living
         </a>
         <a
           data-aos="fade-down"
@@ -83,15 +86,16 @@ function Navbar() {
           data-aos-duration="1600"
           className="text-lg capitalize font-medium text-white hover:text-red-600 transition-colors duration-300 cursor-pointer"
         >
-          Our Services
+          plots
         </a>
         <a
+          href="#team"
           data-aos="fade-down"
           data-aos-easing="linear"
           data-aos-duration="1800"
           className="text-lg capitalize font-medium text-white hover:text-red-600 transition-colors duration-300 cursor-pointer"
         >
-          Our Team
+          Our Services
         </a>
       </div>
     </div>

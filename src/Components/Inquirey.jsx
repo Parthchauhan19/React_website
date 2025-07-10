@@ -45,13 +45,14 @@ function Inquiry() {
         pauseOnHover
         draggable
         hideProgressBar={false}
-        newestOnTop={true}
-        
         theme="dark"
       />
 
       <div
-        data-aos="fade-up"
+        data-aos="fade-up-right"
+        data-aos-offset="300"
+        data-aos-delay="500"
+        data-aos-easing="ease-in-sine"
         className="min-h-screen bg-cover bg-center bg-no-repeat flex items-center justify-center px-4 mt-10"
         style={{ backgroundImage: `url('./images/bg-form.png')` }}
       >
@@ -153,7 +154,8 @@ function Inquiry() {
                   "Gandhinagar",
                   "Morbi",
                   "Bhavnagar",
-                  "Amreli",]}
+                  "Amreli",
+                ]}
                 requiredMsg="Select a location"
               />
               <FormInput

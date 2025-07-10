@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import "aos/dist/aos.css";
 
-const Marquee = () => {
+const Slogun = () => {
   return (
     <div
       data-scroll
@@ -31,7 +31,7 @@ const Marquee = () => {
   );
 };
 
-export default Marquee;
+export default Slogun;
 
 // 101 start tomorrow
 //bg-[#df007bf1]
