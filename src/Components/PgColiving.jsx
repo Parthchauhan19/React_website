@@ -112,23 +112,28 @@ const PgColiving = () => {
           <div
             data-aos="zoom-in"
             data-aos-duration="2000"
-            className="w-screen bg-red-900 text-white py-8 px-8 rounded-lg mb-16"
+            className="w-full bg-red-900 text-white py-8 px-6 rounded-lg mb-16"
           >
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-3 text-center pl-60 capitalize">
-              <div className=" w-75  pr-4">
+            <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 text-center gap-6 capitalize">
+              <div>
                 <div className="text-4xl font-bold mb-2">30k+</div>
                 <div className="text-gray-300">Properties</div>
               </div>
-              <div className=" w-75  pr-4">
+              <div>
+                <div className="text-4xl font-bold mb-2">40+</div>
+                <div className="text-gray-300">Award Winner</div>
+              </div>
+              <div>
                 <div className="text-4xl font-bold mb-2">35+</div>
                 <div className="text-gray-300">Cities</div>
               </div>
-              <div className=" w-75  pr-4">
+              <div>
                 <div className="text-4xl font-bold mb-2">4.5 Lakh+</div>
                 <div className="text-gray-300">Monthly users</div>
               </div>
             </div>
           </div>
+
           <div
             data-aos="zoom-in"
             data-aos-duration="2000"

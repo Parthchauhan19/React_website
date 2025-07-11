@@ -133,7 +133,6 @@ const TeamSection = () => {
   return (
     <>
       <div
-        id="team"
         data-aos="fade-up-left"
         data-aos-offset="300"
         data-aos-delay="500"

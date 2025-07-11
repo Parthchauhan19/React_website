@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import Spline from "@splinetool/react-spline";
-
 import "aos/dist/aos.css";
 
 //we use aos for animations fade in or out also
@@ -11,14 +10,23 @@ const LandingPage = () => {
       data-scroll
       data-scroll-section
       data-scroll-speed="-0.1"
-      className="w-full h-screen bg-[#212121] pt-1 text-white"
+      className="w-full h-screen bg-[#212121] pt-1 text-white relative"
     >
-      {/* First Line with Red Block */}
+      <img
+        src="/images/dailog.png"
+        data-aos="fade-down"
+        data-aos-offset="700"
+        data-aos-duration="3000"
+        className="absolute top-[12%] right-[20%] w-38 h-38 object-contain z-20 animate-bounce"
+        alt="Dialog"
+      />
+
       <div className="h-0 w-[40rem] absolute top-[20%] right-[-5%] shadow-[0_0_900px_30px_#d100b0] -rotate-[30deg]"></div>
+
       <div className="textstructure mt-52 px-6 md:px-16">
         <div className="masker">
           <Spline
-            className="absolute top-[-10%] right-[-5%] h-[500px] lg:left-[35%] -z-10"
+            className="absolute top-[-10%] right-[-5%] h-[500px] lg:left-[69%] -z-10 max-w-[600px] "
             scene="https://prod.spline.design/tLQMNgcq9gLWaW-e/scene.splinecode"
             // scene="https://prod.spline.design/fWKCfj1k-2OZEpzF/scene.splinecode"
           />
@@ -33,7 +41,6 @@ const LandingPage = () => {
         </div>
       </div>
 
-      {/* Second Line */}
       <div className="textstructure px-6 md:px-24">
         <div className="masker">
           <div
@@ -64,7 +71,6 @@ const LandingPage = () => {
         </div>
       </div>
 
-      {/* Third Line */}
       <div className="textstructure px-6 md:px-16">
         <div className="masker">
           <h1
@@ -78,13 +84,11 @@ const LandingPage = () => {
         </div>
       </div>
 
-      {/* Bottom CTA Section */}
       <div
         data-aos="fade-up"
         data-aos-duration="1000"
         className="border-t-[1px] border-zinc-800 mt-32 flex flex-col md:flex-row justify-between items-center py-5 px-6 uppercase gap-4 z-10"
       >
-        {/* Taglines */}
         {[
           "For Your Safe And Secure Futures",
           "Your safe haven starts here",
@@ -97,7 +101,6 @@ const LandingPage = () => {
           </p>
         ))}
 
-        {/* Contact Button Only */}
         <div className="start flex items-center gap-5">
           <div
             data-aos="fade-up"

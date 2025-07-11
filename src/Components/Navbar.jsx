@@ -81,6 +81,7 @@ function Navbar() {
           pg/co-living
         </a>
         <a
+          href="#plot-card"
           data-aos="fade-down"
           data-aos-easing="linear"
           data-aos-duration="1600"
@@ -89,7 +90,7 @@ function Navbar() {
           plots
         </a>
         <a
-          href="#team"
+          href="#ourservice"
           data-aos="fade-down"
           data-aos-easing="linear"
           data-aos-duration="1800"

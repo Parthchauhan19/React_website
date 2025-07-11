@@ -7,7 +7,7 @@ export default function Folast() {
     <footer
       data-aos="fade-up"
       data-aos-duration="3000"
-      className="bg-neutral-100 text-center text-neutral-600  pt-5 dark:bg-neutral-700 dark:text-neutral-200 lg:text-left font-nunito"
+      className="bg-[#212121] text-center text-neutral-600  pt-5 dark:text-neutral-200 lg:text-left font-nunito"
     >
       <div
         data-aos="zoom-in-up"
@@ -259,9 +259,8 @@ export default function Folast() {
         </div>
       </div>
 
-      {/* <!--Copyright section--> */}
       <div className="bg-neutral-200 p-6 text-center dark:bg-neutral-800">
-        <span>© 2023 Copyright : </span>
+        <span>© 2025 Copyright : </span>
         <a
           className="font-semibold text-neutral-600 dark:text-neutral-400"
           href="https://localhost:5173/"

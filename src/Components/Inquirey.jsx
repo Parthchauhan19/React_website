@@ -20,9 +20,14 @@ function Inquiry() {
   }, []);
 
   const onSubmit = async (data) => {
-    await new Promise((resolve) => setTimeout(resolve, 2000));
+    await new Promise((resolve) => setTimeout(resolve, 1000));
     console.log("Submitted Data:", data);
-    toast.success("Your request is sent");
+    toast.success("Your request is sent", {
+      autoClose: 1000, // 1 second
+      pauseOnHover: false,
+      closeOnClick: true,
+    });
+
     reset(); // clear form after submission
   };
 
@@ -38,15 +43,7 @@ function Inquiry() {
 
   return (
     <>
-      <ToastContainer
-        position="top-right"
-        autoClose={4000}
-        closeOnClick
-        pauseOnHover
-        draggable
-        hideProgressBar={false}
-        theme="dark"
-      />
+      <ToastContainer position="top-right" autoClose={1000} />
 
       <div
         data-aos="fade-up-right"
