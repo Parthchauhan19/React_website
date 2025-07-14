@@ -26,7 +26,8 @@ export default function Folast() {
             </span>
           </span>
         </div>
-        {/* <!-- Social network icons container --> */}
+
+
         <div
           data-aos="zoom-in-up"
           data-aos-duration="2000"
@@ -99,10 +100,9 @@ export default function Folast() {
         </div>
       </div>
 
-      {/* <!-- Main container div: holds the entire content of the footer, including four sections (TW Elements, Products, Useful links, and Contact), with responsive styling and appropriate padding/margins. --> */}
       <div className="mx-6 py-10 text-center md:text-left">
         <div className="grid-1 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-          {/* <!-- TW Elements section --> */}
+
           <div className="">
             <h6
               data-aos="zoom-in-up"
@@ -144,10 +144,11 @@ export default function Folast() {
               us on social media for the latest updates.
             </p>
           </div>
-          {/* <!-- Products section --> */}
+
+
           <div data-aos="zoom-in-up" data-aos-duration="2000" className="">
             <h6 className="mb-4 flex justify-center font-semibold uppercase md:justify-start">
-              Products
+              Find Property
             </h6>
             <p className="mb-4">
               <a className="text-neutral-600 dark:text-neutral-200 cursor-pointer hover:text-red-600">
@@ -166,37 +167,39 @@ export default function Folast() {
             </p>
             <p>
               <a className="text-neutral-600 dark:text-neutral-200 cursor-pointer hover:text-red-600">
-                Property
+                Plots
               </a>
             </p>
           </div>
-          {/* <!-- Useful links section --> */}
+
+
           <div data-aos="zoom-in-up" data-aos-duration="2000" className="">
             <h6 className="mb-4 flex justify-center font-semibold uppercase md:justify-start">
-              Useful links
+              Other Citys
             </h6>
             <p className="mb-4">
               <a className="text-neutral-600 font-nunito dark:text-neutral-200 hover:text-red-600 cursor-pointer">
-                Home
+                Delhi
               </a>
             </p>
             <p className="mb-4">
               <a className="text-neutral-600 dark:text-neutral-200 hover:text-red-600 cursor-pointer">
-                About
+                Mumbai
               </a>
             </p>
             <p className="mb-4">
               <a className="text-neutral-600 dark:text-neutral-200 hover:text-red-600 cursor-pointer">
-                Services
+                Pune
               </a>
             </p>
             <p>
               <a className="text-neutral-600 dark:text-neutral-200 hover:text-red-600 cursor-pointer">
-                Help
+                Chennai
               </a>
             </p>
           </div>
-          {/* <!-- Contact section --> */}
+
+
           <div data-aos="zoom-in-up" data-aos-duration="2000" className="">
             <h6 className="mb-4 flex justify-center font-semibold uppercase md:justify-start">
               Contact

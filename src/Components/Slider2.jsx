@@ -93,9 +93,9 @@ const Slider2 = () => {
       data-aos-easing="ease-in-sine"
       className="max-w-[90vw] h-1/2 mx-auto px-4 py-8 "
     >
-      {/* Slider Container */}
+      
       <div className="relative">
-        {/* Main Slider */}
+       
         <div className="relative overflow-hidden rounded-2xl">
           <div
             className="flex transition-transform duration-500 ease-in-out"
@@ -104,7 +104,7 @@ const Slider2 = () => {
             {properties.map((property) => (
               <div key={property.id} className="w-1/2 flex-shrink-0 px-2">
                 <div className="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl transition-all duration-300 group">
-                  {/* Image Container */}
+              
                   <div className="relative overflow-hidden h-64">
                     <img
                       src={property.image}
@@ -114,7 +114,7 @@ const Slider2 = () => {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   </div>
 
-                  {/* Content */}
+                 
                   <div className="p-6">
                     <div className="flex justify-between items-start mb-3">
                       <div>

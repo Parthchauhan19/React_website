@@ -103,7 +103,7 @@ const NewsArticlesSlider = () => {
           className="mb-12 text-center"
         >
           <h1 className="text-4xl md:text-5xl font-bold text-gray-100 mb-4">
-            News & <span className="text-red-600">Articles</span>
+            News & <span className="text-red-600">Article&apos;s</span>
           </h1>
           <p className="text-xl text-gray-500 max-w-2xl mx-auto">
             Read what's happening in Real Estate

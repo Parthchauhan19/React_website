@@ -99,9 +99,9 @@ const Rental = () => {
         </p>
       </div>
 
-      {/* Slider Container */}
+     
       <div className="relative">
-        {/* Main Slider */}
+    
         <div className="relative overflow-hidden rounded-2xl">
           <div
             className="flex transition-transform duration-500 ease-in-out"
@@ -110,9 +110,9 @@ const Rental = () => {
             {properties.map((property) => (
               <div key={property.id} className="w-1/2 flex-shrink-0 px-2">
                 <div className="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl transition-all duration-300 group">
-                  {/* Card Layout - Image Left, Content Right */}
+                 
                   <div className="flex h-90">
-                    {/* Image Container - Left Side */}
+                   
                     <div className="relative overflow-hidden w-3/5 flex-shrink-0 h-90">
                       <img
                         src={property.image}
@@ -122,7 +122,7 @@ const Rental = () => {
                       <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     </div>
 
-                    {/* Content - Right Side */}
+                  
                     <div className="flex-1 p-6 flex flex-col justify-between bg-gradient-to-r from-white to-gray-50">
                       <div>
                         <div className="flex justify-between items-start mb-4">
@@ -156,7 +156,7 @@ const Rental = () => {
                         </div>
                       </div>
 
-                      {/* Contact Button */}
+                     
                       <div className="mt-4">
                         <button className="w-full bg-gradient-to-r from-red-600 to-red-700 text-white py-3 px-6 rounded-lg font-semibold hover:from-red-700 hover:to-red-800 transition-all duration-300 shadow-md hover:shadow-lg">
                           Contact

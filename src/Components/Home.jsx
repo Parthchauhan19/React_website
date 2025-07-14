@@ -15,6 +15,7 @@ import Slogun from "../Components/Slogun";
 import PlotCollection from "../Components/PlotCollection";
 import News from "../Components/News";
 import OurService from "../Components/OurService";
+import Review from "./Review";
 // import About from "../Components/About";
 
 const Home = () => {
@@ -36,6 +37,7 @@ const Home = () => {
         <TeamSection />
         <News />
         <OurService />
+        <Review />
         <Inquirey />
         <Fotlast />
       </div>

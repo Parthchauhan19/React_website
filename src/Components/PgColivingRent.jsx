@@ -26,7 +26,7 @@ const PgColivingRent = () => {
         >
           <h2 className="text-4xl font-semibold mb-6 uppercase">
             <span className="text-white font-semibold">
-              Ochi Pg for <span className="text-blue-600">boys</span>{" "}
+              Ochi Pg for <span className="text-blue-600">boy&apos;s</span>{" "}
             </span>
           </h2>
           <p className="text-gray-400 capitalize mb-6 text-2xl">
@@ -63,7 +63,7 @@ const PgColivingRent = () => {
         >
           <h2 className="text-4xl font-semibold mb-6 uppercase">
             <span className="text-white font-semibold">
-              Ochi Pg for <span className="text-blue-600">girls</span>
+              Ochi Pg for <span className="text-blue-600">girl&apos;s</span>
             </span>
           </h2>
           <p className="text-gray-400 capitalize mb-6 text-2xl">
@@ -100,7 +100,8 @@ const PgColivingRent = () => {
         >
           <h2 className="text-4xl font-semibold mb-6 uppercase">
             <span className="text-white font-semibold">
-              ochi Hostel for <span className="text-blue-600">students</span>
+              ochi Hostel for{" "}
+              <span className="text-blue-600">student&apos;s</span>
             </span>
           </h2>
           <p className="text-gray-400 capitalize mb-6 text-2xl">

@@ -43,7 +43,7 @@ const PlotCollections = () => {
             Plot<span className="text-red-600"> Collection</span>
           </h1>
           <p className="text-gray-400 text-lg">
-            Exclusive Showcase of Our Premium Plots
+            Exclusive Showcase of Our Premium Plot&apos;s
           </p>
         </div>
         <div

@@ -23,7 +23,7 @@ function Inquiry() {
     await new Promise((resolve) => setTimeout(resolve, 1000));
     console.log("Submitted Data:", data);
     toast.success("Your request is sent", {
-      autoClose: 1000, // 1 second
+      autoClose: 4000, // 1 second
       pauseOnHover: false,
       closeOnClick: true,
     });
@@ -45,16 +45,20 @@ function Inquiry() {
     <>
       <ToastContainer position="top-right" autoClose={1000} />
 
+      <div className="min-h-screen w-full absolute inset-0 bg-gradient from-black via-black/65 to-transparent z-10"></div>
       <div
         data-aos="fade-up-right"
         data-aos-offset="300"
         data-aos-delay="500"
         data-aos-easing="ease-in-sine"
-        className="min-h-screen bg-cover bg-center bg-no-repeat flex items-center justify-center px-4 mt-10"
-        style={{ backgroundImage: `url('./images/bg-form.png')` }}
+        className="min-h-screen flex items-center"
+        style={{
+          backgroundImage: "url('/images/build.jpg')",
+          backgroundSize: "cover",
+        }}
       >
         <motion.div
-          className="max-w-[700px] w-full p-6 rounded-xl bg-[#212121]/90 backdrop-blur-md text-white shadow-2xl"
+          className="max-w-[700px] w-full p-6 rounded-xl bg-[#212121]/80 backdrop-blur-md text-gray-200 shadow-2xl ml-30 px-4 mt-10 mb-10"
           animate={{
             boxShadow: [
               "0 0 0px rgba(255,255,255,0)",
@@ -63,18 +67,17 @@ function Inquiry() {
             ],
           }}
           transition={{
-            duration: 1.5,
+            duration: 0.8,
             repeat: Infinity,
             repeatType: "loop",
             ease: "easeInOut",
           }}
         >
-          <h2 className="text-center mb-8 text-4xl font-bold text-red-500">
-            Real Estate Inquiry Form
+          <h2 className="text-center mb-8 text-4xl font-bold text-red-600 uppercase">
+            Inquiry Form
           </h2>
 
           <form onSubmit={handleValidateAndSubmit}>
-            {/* Inquiry Type */}
             <FormSelect
               label="Inquiry Type"
               name="inquiryType"
@@ -84,7 +87,6 @@ function Inquiry() {
               requiredMsg="Inquiry type is required"
             />
 
-            {/* I’m a... */}
             <FormSelect
               label="I’m a"
               name="userType"
@@ -94,7 +96,6 @@ function Inquiry() {
               requiredMsg="Please select your role"
             />
 
-            {/* Name Fields */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-5">
               <FormInput
                 label="First Name"
@@ -120,7 +121,6 @@ function Inquiry() {
               />
             </div>
 
-            {/* Email */}
             <FormInput
               label="Email Address"
               name="email"
@@ -136,7 +136,6 @@ function Inquiry() {
               }}
             />
 
-            {/* Location and Zip */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-5">
               <FormSelect
                 label="Location"
@@ -170,7 +169,6 @@ function Inquiry() {
               />
             </div>
 
-            {/* Property Type */}
             <FormSelect
               label="Property Type"
               name="propertyType"
@@ -191,7 +189,6 @@ function Inquiry() {
               requiredMsg="Select a property type"
             />
 
-            {/* Contact No */}
             <FormInput
               label="Contact No"
               name="contactNo"
@@ -209,7 +206,6 @@ function Inquiry() {
               }}
             />
 
-            {/* Message */}
             <div className="mb-5">
               <label className="block font-semibold mb-1">Your Message:</label>
               <textarea
@@ -218,8 +214,8 @@ function Inquiry() {
                   minLength: { value: 3, message: "Min 3 chars" },
                   maxLength: { value: 200, message: "Max 200 chars" },
                 })}
-                className={`w-full h-20 resize-none p-2 border rounded bg-[#212121] text-white ${
-                  errors.yourMessage ? "border-red-500" : "border-gray-300"
+                className={`w-full h-20 resize-none p-2 border rounded bg-[#212121] text-gray-200 ${
+                  errors.yourMessage ? "border-red-500" : "border-gray-700"
                 }`}
               />
               {errors.yourMessage && (
@@ -229,14 +225,13 @@ function Inquiry() {
               )}
             </div>
 
-            {/* Submit Button */}
             <button
               type="submit"
               disabled={isSubmitting}
-              className={`w-full p-2 rounded font-bold text-white transition-all ${
+              className={`w-full p-2 rounded font-bold text-gray-200 transition-all ${
                 isSubmitting
                   ? "bg-gray-500 cursor-not-allowed"
-                  : "bg-red-500 hover:bg-red-600"
+                  : "bg-red-600 hover:bg-red-700"
               }`}
             >
               {isSubmitting ? "Submitting..." : "Submit"}
@@ -248,15 +243,14 @@ function Inquiry() {
   );
 }
 
-// Reusable Input Component
 const FormInput = ({ label, name, type = "text", register, errors, rules }) => (
   <div>
     <label className="block font-semibold mb-1">{label}:</label>
     <input
       type={type}
       {...register(name, rules)}
-      className={`w-full p-2 border rounded bg-[#212121] text-white ${
-        errors[name] ? "border-red-500" : "border-gray-300"
+      className={`w-full p-2 border rounded bg-[#212121] text-gray-200 ${
+        errors[name] ? "border-red-500" : "border-gray-700"
       }`}
     />
     {errors[name] && (
@@ -265,7 +259,6 @@ const FormInput = ({ label, name, type = "text", register, errors, rules }) => (
   </div>
 );
 
-// Reusable Select Component
 const FormSelect = ({
   label,
   name,
@@ -278,8 +271,8 @@ const FormSelect = ({
     <label className="block font-semibold mb-1">{label}:</label>
     <select
       {...register(name, { required: requiredMsg })}
-      className={`w-full p-2 border rounded bg-[#212121] text-white ${
-        errors[name] ? "border-red-500" : "border-gray-300"
+      className={`w-full p-2 border rounded bg-[#212121] text-gray-400 ${
+        errors[name] ? "border-red-500" : "border-gray-700"
       }`}
     >
       <option value="">Select</option>

@@ -99,13 +99,13 @@ const TeamSection = () => {
       data-aos-offset="300"
       data-aos-delay="500"
       data-aos-easing="ease-in-sine"
-      className="flex justify-center flex-wrap gap-8 mb-8"
+      className="flex justify-center flex-wrap gap-8 mb-8 "
     >
       {members.map((member) => (
         <div
           data-aos="jump-in"
           key={member.id}
-          className="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden relative"
+          className="bg-white rounded-lg shadow-md hover:shadow-xl duration-300 overflow-hidden relative transform hover:-translate-y-3 transition-all"
           style={{ width: "280px", height: "420px" }}
         >
           <div className="p-6 text-center h-full flex flex-col justify-between">

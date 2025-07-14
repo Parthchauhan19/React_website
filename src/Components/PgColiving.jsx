@@ -155,7 +155,7 @@ const PgColiving = () => {
                     <div className="absolute inset-0 bg-opacity-40 flex items-end">
                       <div className="p-4">
                         <h3 className="text-white text-xl font-bold">
-                          For boys
+                          For boy&apos;s
                         </h3>
                       </div>
                     </div>
@@ -176,7 +176,7 @@ const PgColiving = () => {
                     <div className="absolute inset-0 bg-opacity-40 flex items-end">
                       <div className="p-4">
                         <h3 className="text-white text-xl font-bold">
-                          For Girls
+                          For Girl&apos;s
                         </h3>
                       </div>
                     </div>

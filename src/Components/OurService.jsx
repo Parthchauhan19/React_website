@@ -1,8 +1,19 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
 const OurService = () => {
+  const [phone, setPhone] = useState("");
+
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
+
+  async function onSubmit() {
+    await new Promise((resolve) => setTimeout(resolve, 3000));
+    console.log("Submitting Rent Request : +91", phone);
+  }
+
   return (
     <div id="ourservice" className="w-full overflow-hidden">
       <div className="relative w-full h-screen">
@@ -40,9 +51,14 @@ const OurService = () => {
               <input
                 type="tel"
                 placeholder=" +91 Phone number"
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
                 className="border border-gray-700 rounded-lg px-4 py-3 text-white w-full"
               />
-              <button className="bg-red-600 hover:bg-red-700 text-white font-semibold px-6 py-3 rounded-lg">
+              <button
+                onClick={onSubmit}
+                className="bg-red-600 hover:bg-red-700 text-white font-semibold px-6 py-3 rounded-lg"
+              >
                 Send
               </button>
             </div>

@@ -13,7 +13,7 @@ function Navbar() {
 
   return (
     <div className="fixed z-[999] w-full px-20 py-8 font-['Nunito Sans'] flex justify-between items-center bg-[#212121]">
-      {/* Logo */}
+
       <div
         data-aos="fade-down"
         data-aos-easing="linear"
@@ -51,7 +51,6 @@ function Navbar() {
         </svg>
       </div>
 
-      {/* Navigation Links */}
       <div className="links flex gap-10">
         <a
           href="#commercial"
@@ -97,6 +96,15 @@ function Navbar() {
           className="text-lg capitalize font-medium text-white hover:text-red-600 transition-colors duration-300 cursor-pointer"
         >
           Our Services
+        </a>
+        <a
+          href="#signup"
+          data-aos="fade-down"
+          data-aos-easing="linear"
+          data-aos-duration="1800"
+          className="text-lg capitalize font-medium text-white hover:text-red-600 transition-colors duration-300 cursor-pointer"
+        >
+          Sign Up
         </a>
       </div>
     </div>
