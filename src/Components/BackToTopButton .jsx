@@ -6,11 +6,13 @@ gsap.registerPlugin(ScrollToPlugin);
 
 const BackToTopButton = () => {
   const handleClick = () => {
+
     gsap.to(".back-to-top", {
       rotation: "+=180",
       duration: 0.5,
       ease: "power2.out",
     });
+
 
     gsap.to(window, {
       scrollTo: { y: 0 },
@@ -22,7 +24,7 @@ const BackToTopButton = () => {
   return (
     <button
       onClick={handleClick}
-      className="back-to-top fixed bottom-8 right-8 z-50 bg-red-600 w-12 h-12 rounded-full flex items-center justify-center text-white font-bold shadow-lg hover:shadow-xl transition-all duration-300 rotate-[-45deg] animate-bounce"
+      className="back-to-top fixed bottom-8 right-8 z-50 bg-red-600 hover:bg-blue-600 w-12 h-12 rounded-full flex items-center justify-center text-white font-bold shadow-lg hover:shadow-xl transition-all duration-300 rotate-[-45deg] animate-bounce"
       aria-label="Back to top"
     >
       <FaArrowUpLong />

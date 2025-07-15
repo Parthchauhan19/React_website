@@ -57,16 +57,16 @@ function Navbar() {
           data-aos="fade-down"
           data-aos-easing="linear"
           data-aos-duration="1000"
-          className="text-lg capitalize font-medium text-white hover:text-red-600 transition-colors duration-300 cursor-pointer"
+          className="text-lg capitalize font-medium text-white hover:text-red-600  hover:border-b-1 hover:border-red-600 transition-colors duration-300 cursor-pointer"
         >
-          Buy/Commercial
+          Buy / Commercial
         </a>
         <a
           href="#rental"
           data-aos="fade-down"
           data-aos-easing="linear"
           data-aos-duration="1200"
-          className="text-lg capitalize font-medium text-white hover:text-red-600 transition-colors duration-300 cursor-pointer"
+          className="text-lg capitalize font-medium text-white hover:text-red-600 hover:border-b-1 hover:border-red-600 transition-colors duration-300 cursor-pointer"
         >
           Rent
         </a>
@@ -75,16 +75,16 @@ function Navbar() {
           data-aos="fade-down"
           data-aos-easing="linear"
           data-aos-duration="1400"
-          className="text-lg capitalize font-medium text-white hover:text-red-600 transition-colors duration-300 cursor-pointer"
+          className="text-lg capitalize font-medium text-white hover:text-red-600 hover:border-b-1 hover:border-red-600 transition-colors duration-300 cursor-pointer"
         >
-          pg/co-living
+          pg / co-living
         </a>
         <a
           href="#plot-card"
           data-aos="fade-down"
           data-aos-easing="linear"
           data-aos-duration="1600"
-          className="text-lg capitalize font-medium text-white hover:text-red-600 transition-colors duration-300 cursor-pointer"
+          className="text-lg capitalize font-medium text-white hover:text-red-600 hover:border-b-1 hover:border-red-600 transition-colors duration-300 cursor-pointer"
         >
           plots
         </a>
@@ -93,7 +93,7 @@ function Navbar() {
           data-aos="fade-down"
           data-aos-easing="linear"
           data-aos-duration="1800"
-          className="text-lg capitalize font-medium text-white hover:text-red-600 transition-colors duration-300 cursor-pointer"
+          className="text-lg capitalize font-medium text-white hover:text-red-600 hover:border-b-1 hover:border-red-600 transition-colors duration-300 cursor-pointer"
         >
           Our Services
         </a>
@@ -103,7 +103,7 @@ function Navbar() {
           data-aos="fade-down"
           data-aos-easing="linear"
           data-aos-duration="1800"
-          className="text-lg capitalize w-20  flex items-center justify-center font-medium text-white hover:text-zinc-900 transition-colors duration-300 cursor-pointer rounded-3xl bg-red-600"
+          className="text-lg capitalize w-20  flex items-center justify-center font-medium text-white transition-colors duration-300 cursor-pointer rounded-3xl bg-red-600 hover:bg-blue-600"
         >
           Login
         </Link>

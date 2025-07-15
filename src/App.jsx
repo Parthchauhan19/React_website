@@ -22,17 +22,19 @@ const App = () => {
     <>
       <BackToTopButton />
       <div className="w-full min-h-screen text-2xl text-white bg-[#212121] ">
-        {location.pathname !== "/login" &&
-          location.pathname !== "/registration" && <Navbar />}
+        {location.pathname !== "/login" && location.pathname !== "/signup" && (
+          <Navbar />
+        )}
 
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<LoginPage />} />
-          <Route path="/registration" element={<SignUpPage />} />
+          <Route path="/signup" element={<SignUpPage />} />
         </Routes>
 
-        {location.pathname !== "/login" &&
-          location.pathname !== "/registration" && <Folast />}
+        {location.pathname !== "/login" && location.pathname !== "/signup" && (
+          <Folast />
+        )}
       </div>
     </>
   );

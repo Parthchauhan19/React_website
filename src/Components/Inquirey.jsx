@@ -23,7 +23,7 @@ function Inquiry() {
     await new Promise((resolve) => setTimeout(resolve, 1000));
     console.log("Submitted Data:", data);
     toast.success("Your request is sent", {
-      autoClose: 4000, // 1 second
+      autoClose: 4000, // 4 second
       pauseOnHover: false,
       closeOnClick: true,
     });
