@@ -2,6 +2,7 @@ import React from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   useEffect(() => {
@@ -13,7 +14,6 @@ function Navbar() {
 
   return (
     <div className="fixed z-[999] w-full px-20 py-8 font-['Nunito Sans'] flex justify-between items-center bg-[#212121]">
-
       <div
         data-aos="fade-down"
         data-aos-easing="linear"
@@ -97,15 +97,16 @@ function Navbar() {
         >
           Our Services
         </a>
-        <a
-          href="#signup"
+
+        <Link
+          to="/login"
           data-aos="fade-down"
           data-aos-easing="linear"
           data-aos-duration="1800"
-          className="text-lg capitalize font-medium text-white hover:text-red-600 transition-colors duration-300 cursor-pointer"
+          className="text-lg capitalize w-20  flex items-center justify-center font-medium text-white hover:text-zinc-900 transition-colors duration-300 cursor-pointer rounded-3xl bg-red-600"
         >
-          Sign Up
-        </a>
+          Login
+        </Link>
       </div>
     </div>
   );

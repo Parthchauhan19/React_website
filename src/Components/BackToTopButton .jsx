@@ -6,13 +6,11 @@ gsap.registerPlugin(ScrollToPlugin);
 
 const BackToTopButton = () => {
   const handleClick = () => {
-
     gsap.to(".back-to-top", {
       rotation: "+=180",
       duration: 0.5,
       ease: "power2.out",
     });
-
 
     gsap.to(window, {
       scrollTo: { y: 0 },

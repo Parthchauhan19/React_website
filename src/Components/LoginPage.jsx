@@ -17,8 +17,7 @@ export default function LoginPage() {
   }
 
   return (
-    <div className="min-h-screen flex">
-      {/* Left side image panel */}
+    <div id="login" className="min-h-screen flex">
       <div className="flex-1 relative bg-gradient-to-br from-red-200 to-red-300 hidden lg:block">
         <div className="absolute inset-0">
           <img
@@ -61,10 +60,8 @@ export default function LoginPage() {
         </div>
       </div>
 
-      {/* Right side form panel */}
       <div className="flex-1 bg-gray-50 flex items-center justify-center p-8 lg:max-w-md xl:max-w-lg">
         <div className="w-full max-w-md">
-          {/* Logo for mobile */}
           <div className="flex items-center justify-center mb-8 lg:hidden">
             <div className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center">
               <svg
@@ -83,7 +80,6 @@ export default function LoginPage() {
             </div>
           </div>
 
-          {/* Heading */}
           <div className="text-center mb-8">
             <h2 className="text-4xl font-bold text-gray-900 mb-2">
               Welcome To Ochi !
@@ -91,7 +87,6 @@ export default function LoginPage() {
             <p className="text-gray-600">Login your account</p>
           </div>
 
-          {/* FORM START */}
           <form onSubmit={onSubmit} className="space-y-7">
             <div>
               <label
@@ -164,9 +159,7 @@ export default function LoginPage() {
               Login
             </button>
           </form>
-          {/* FORM END */}
 
-          {/* Social Login */}
           <div className="space-y-3 mt-6">
             <button
               type="button"
@@ -204,13 +197,12 @@ export default function LoginPage() {
             </button>
           </div>
 
-          {/* Sign Up link */}
           <div className="text-center mt-6">
             <span className="text-sm text-gray-600">
               You don't have an account?{" "}
             </span>
             <a
-              href="#"
+              href="#registration"
               className="text-sm text-red-600 hover:text-red-800 font-medium"
             >
               Sign Up
