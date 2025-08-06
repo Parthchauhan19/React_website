@@ -46,6 +46,8 @@ const PlotCollections = () => {
             Exclusive Showcase of Our Premium Plot&apos;s
           </p>
         </div>
+
+        
         <div
           data-aos="zoom-in"
           data-aos-duration="2000"

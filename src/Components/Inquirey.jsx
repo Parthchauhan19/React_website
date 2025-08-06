@@ -44,8 +44,6 @@ function Inquiry() {
   return (
     <>
       <ToastContainer position="top-right" autoClose={1000} />
-
-      <div className="min-h-screen w-full absolute inset-0 bg-gradient from-black via-black/65 to-transparent z-10"></div>
       <div
         data-aos="fade-up-right"
         data-aos-offset="300"

@@ -1,8 +1,5 @@
 import { motion } from "framer-motion";
-import Spline from "@splinetool/react-spline";
 import "aos/dist/aos.css";
-
-//we use aos for animations fade in or out also
 
 const LandingPage = () => {
   return (
@@ -10,26 +7,27 @@ const LandingPage = () => {
       data-scroll
       data-scroll-section
       data-scroll-speed="-0.1"
-      className="w-full h-screen bg-[#212121] pt-1 text-white relative"
+      className="w-full h-screen bg-[#212121] pt-1 text-white relative overflow-hidden"
     >
       <img
         src="/images/dailog.png"
         data-aos="fade-down"
         data-aos-offset="700"
         data-aos-duration="3000"
-        className="absolute top-[12%] right-[20%] w-38 h-38 object-contain z-20 animate-bounce"
+        className="absolute top-[12%] right-[20%] w-38 h-38 object-contain z-30 animate-bounce"
         alt="Dialog"
       />
 
-      <div className="h-0 w-[40rem] absolute top-[20%] right-[-5%] shadow-[0_0_900px_30px_#d100b0] -rotate-[30deg]"></div>
+      <div className="h-0 w-[40rem] absolute top-[15%]  right-[-10%] shadow-[0_0_900px_100px_#ff7e7e] -rotate-[30deg]"></div>
 
-      <div className="textstructure mt-52 px-6 md:px-16">
+      <img
+        src="/images/manBag.png"
+        className="absolute top-[18%] right-[0%] lg:right-auto lg:left-[73%] h-[500px] z-10 max-w-[600px] object-contain"
+        alt="ManBag"
+      />
+
+      <div className="textstructure max-w-[1400px] mx-8 mt-52 px-6 md:px-16">
         <div className="masker">
-          <Spline
-            className="absolute top-[-10%] right-[-5%] h-[500px] lg:left-[69%] -z-10 max-w-[600px] "
-            scene="https://prod.spline.design/tLQMNgcq9gLWaW-e/scene.splinecode"
-            // scene="https://prod.spline.design/fWKCfj1k-2OZEpzF/scene.splinecode"
-          />
           <h1
             data-aos="fade-right"
             data-aos-offset="300"
@@ -41,7 +39,7 @@ const LandingPage = () => {
         </div>
       </div>
 
-      <div className="textstructure px-6 md:px-24">
+      <div className="textstructure max-w-[1400px] mx-10 px-6 md:px-24">
         <div className="masker">
           <div
             data-aos="fade-right"
@@ -71,7 +69,7 @@ const LandingPage = () => {
         </div>
       </div>
 
-      <div className="textstructure px-6 md:px-16">
+      <div className="textstructure max-w-[1400px] mx-8 px-6 md:px-16">
         <div className="masker">
           <h1
             data-aos="fade-right"
@@ -87,7 +85,7 @@ const LandingPage = () => {
       <div
         data-aos="fade-up"
         data-aos-duration="1000"
-        className="border-t-[1px] border-zinc-800 mt-32 flex flex-col md:flex-row justify-between items-center py-5 px-6 uppercase gap-4 z-10"
+        className="border-t-[1px] border-zinc-800 mt-32 flex flex-col md:flex-row justify-between items-center py-5 px-6 uppercase gap-4 z-999"
       >
         {[
           "For Your Safe And Secure Futures",
@@ -106,7 +104,7 @@ const LandingPage = () => {
             data-aos="fade-up"
             data-aos-duration="2000"
             className="px-5 py-2 border-[1px] border-zinc-400 font-light rounded-full text-medium uppercase cursor-pointer 
-              hover:border-red-600 hover:text-red-600 transition-all duration-300 ease-in-out"
+              hover:border-red-600 hover:text-red-600 transition-all duration-300 ease-in-out z-50"
           >
             Contact Us
           </div>
@@ -115,4 +113,5 @@ const LandingPage = () => {
     </div>
   );
 };
+
 export default LandingPage;

@@ -94,13 +94,7 @@ const TeamSection = () => {
   const secondRow = teamMembers.slice(4);
 
   const TeamRow = ({ members }) => (
-    <div
-      data-aos="fade-up-left"
-      data-aos-offset="300"
-      data-aos-delay="500"
-      data-aos-easing="ease-in-sine"
-      className="flex justify-center flex-wrap gap-8 mb-8 "
-    >
+    <div className="flex justify-center flex-wrap gap-8 mb-8 ">
       {members.map((member) => (
         <div
           data-aos="jump-in"
@@ -133,10 +127,8 @@ const TeamSection = () => {
   return (
     <>
       <div
-        data-aos="fade-up-left"
-        data-aos-offset="300"
-        data-aos-delay="500"
-        data-aos-easing="ease-in-sine"
+        data-aos="zoom-in"
+        data-aos-duration="2000"
         className="min-h-screen bg-[#212121] mt-40 py-16 px-4"
       >
         <div className="max-w-7xl mx-auto">
@@ -149,7 +141,11 @@ const TeamSection = () => {
               Estate Property Services.
             </p>
           </div>
-          <div className="space-y-8">
+          <div
+            data-aos="zoom-in"
+            data-aos-duration="2000"
+            className="space-y-8"
+          >
             <TeamRow members={firstRow} />
             {secondRow.length > 0 && <TeamRow members={secondRow} />}
           </div>

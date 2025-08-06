@@ -103,7 +103,7 @@ function Navbar() {
           data-aos="fade-down"
           data-aos-easing="linear"
           data-aos-duration="1800"
-          className="text-lg capitalize w-20  flex items-center justify-center font-medium text-white transition-colors duration-300 cursor-pointer rounded-3xl bg-red-600 hover:bg-blue-600"
+          className="text-lg capitalize w-20 h-8 pb-1 flex items-center justify-center font-medium text-white transition-colors duration-300 cursor-pointer rounded-3xl bg-red-600 hover:bg-blue-600"
         >
           Login
         </Link>

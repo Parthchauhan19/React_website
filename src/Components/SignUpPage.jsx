@@ -50,7 +50,7 @@ export default function SignUpPage() {
                 />
               </svg>
             </div>
-            <span className="ml-3 text-white text-xl font-semibold">Ochi</span>
+            <span className="ml-3 text-white text-xl font-semibold">Ochi Reality</span>
           </div>
 
           <div className="absolute bottom-16 left-8 right-8">
