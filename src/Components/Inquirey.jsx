@@ -5,6 +5,7 @@ import "react-toastify/dist/ReactToastify.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import axios from "axios";
 
 function Inquiry() {
   const {
@@ -20,22 +21,28 @@ function Inquiry() {
   }, []);
 
   const onSubmit = async (data) => {
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    console.log("Submitted Data:", data);
-    toast.success("Your request is sent", {
-      autoClose: 4000, // 4 second
-      pauseOnHover: false,
-      closeOnClick: true,
-    });
+    try {
+      const response = await axios.post("http://localhost:8000/inquiry", data);
+      console.log("Server response:", response.data);
 
-    reset(); // clear form after submission
+      toast.success("Your inquiry has been submitted successfully!", {
+        autoClose: 4000,
+        pauseOnHover: false,
+        closeOnClick: true,
+      });
+
+      reset();
+    } catch (error) {
+      console.error("Submission error:", error.response?.data || error.message);
+      toast.error("Failed to submit inquiry. Please try again.");
+    }
   };
 
   const handleValidateAndSubmit = async (e) => {
     e.preventDefault();
     const isValid = await trigger();
     if (!isValid) {
-      toast.error("Fill the data first.");
+      toast.error("Please fill in all required fields.");
       return;
     }
     handleSubmit(onSubmit)();
