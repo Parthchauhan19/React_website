@@ -37,9 +37,12 @@ const PgColivingRent = () => {
             and more — all in prime locations. Easy search, instant booking, and
             trusted service at your fingertips!
           </p>
-          <button className="bg-red-600 text-white px-6 py-2 rounded-full hover:bg-red-700 transition-all duration-200">
+          <a
+            href="#inquiry"
+            className="bg-red-600 text-white px-6 py-2 rounded-full hover:bg-red-700 transition-all duration-200"
+          >
             Explore
-          </button>
+          </a>
         </div>
       </div>
       <div className="flex flex-col md:flex-row items-center justify-center space-y-6 md:space-y-0 md:space-x-10">
@@ -74,9 +77,12 @@ const PgColivingRent = () => {
             and more — all in prime locations. Easy search, instant booking, and
             trusted service at your fingertips!
           </p>
-          <button className="bg-red-600 text-white px-6 py-2 rounded-full hover:bg-red-700 transition-all duration-200">
+          <a
+            href="#inquiry"
+            className="bg-red-600 text-white px-6 py-2 rounded-full hover:bg-red-700 transition-all duration-200"
+          >
             Explore
-          </button>
+          </a>
         </div>
       </div>
       <div className="flex flex-col md:flex-row-reverse items-center justify-center space-y-6 md:space-y-0 md:space-x-10 md:space-x-reverse">
@@ -112,9 +118,12 @@ const PgColivingRent = () => {
             and more — all in prime locations. Easy search, instant booking, and
             trusted service at your fingertips!
           </p>
-          <button className="bg-red-600 text-white px-6 py-2 rounded-full hover:bg-red-700 transition-all duration-200">
+          <a
+            href="#inquiry"
+            className="bg-red-600 text-white px-6 py-2 rounded-full hover:bg-red-700 transition-all duration-200"
+          >
             Explore
-          </button>
+          </a>
         </div>
       </div>
     </div>

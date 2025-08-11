@@ -100,14 +100,15 @@ const LandingPage = () => {
         ))}
 
         <div className="start flex items-center gap-5">
-          <div
+          <a
             data-aos="fade-up"
             data-aos-duration="2000"
+            href="#inquiry"
             className="px-5 py-2 border-[1px] border-zinc-400 font-light rounded-full text-medium uppercase cursor-pointer 
               hover:border-red-600 hover:text-red-600 transition-all duration-300 ease-in-out z-50"
           >
             Contact Us
-          </div>
+          </a>
         </div>
       </div>
     </div>

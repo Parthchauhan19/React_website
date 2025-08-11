@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { ClipboardIcon, LocationEdit, Phone } from "lucide-react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -54,27 +55,20 @@ const TeamSection = () => {
             </h3>
 
             <div className="flex items-center justify-center gap-2 text-gray-700 font-medium text-sm mb-2">
-              <svg
-                className="w-4 h-4 text-green-600"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M3 5a2 2 0 012-2h2.586a1 1 0 01.707.293l2.414 2.414a1 1 0 01.293.707V8a1 1 0 01-.293.707l-1.586 1.586a16.016 16.016 0 006.414 6.414l1.586-1.586A1 1 0 0116 14h1.586a1 1 0 01.707.293l2.414 2.414a1 1 0 01.293.707V19a2 2 0 01-2 2h-.5C10.04 21 3 13.96 3 5.5V5z"
-                />
-              </svg>
+              <Phone className="w-4 h-4 text-green-600" strokeWidth={2} />
               +91 {member.Number}
             </div>
 
-            <p className="text-gray-700 font-medium text-sm mb-2">
+            <p className="flex items-center justify-center gap-2 text-gray-700 font-medium text-sm mb-2">
+              <ClipboardIcon
+                className="w-4 h-4 text-green-600"
+                strokeWidth={2}
+              />
               Ochi Reality Team Member
             </p>
 
-            <p className="text-gray-600 text-sm leading-relaxed px-2 mb-6">
+            <p className="flex items-center justify-center gap-2 text-gray-600 text-sm leading-relaxed px-2 mb-6">
+              <LocationEdit className="w-4 h-4 text-green-600" strokeWidth={2} />
               {member.Address}
             </p>
 

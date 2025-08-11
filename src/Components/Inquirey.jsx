@@ -52,6 +52,7 @@ function Inquiry() {
     <>
       <ToastContainer position="top-right" autoClose={1000} />
       <div
+        id="inquiry"
         data-aos="fade-up-right"
         data-aos-offset="300"
         data-aos-delay="500"

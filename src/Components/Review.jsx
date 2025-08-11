@@ -4,7 +4,7 @@ import "aos/dist/aos.css";
 
 function CardReview({ name, feedback, date, title }) {
   return (
-    <div className="bg-gray-800 shadow-md rounded-3xl p-6">
+    <div className="bg-gray-800 shadow-md rounded-3xl p-6 ">
       <div className="flex mb-3 text-amber-500">
         {Array(4)
           .fill(0)

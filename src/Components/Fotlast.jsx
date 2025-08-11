@@ -230,7 +230,7 @@ export default function Folast() {
                   clipRule="evenodd"
                 />
               </svg>
-              + 91 9525759926
+              + 91 9327195791
             </p>
             <p className="flex items-center justify-center md:justify-start cursor-pointer hover:text-red-600">
               <svg
@@ -245,7 +245,7 @@ export default function Folast() {
                   clipRule="evenodd"
                 />
               </svg>
-              + 91 9313856645
+              + 91 9313759955
             </p>
           </div>
         </div>
@@ -259,6 +259,7 @@ export default function Folast() {
         >
           Ochi Reality
         </a>
+        <span>. All rights reserved.</span>
       </div>
     </footer>
   );
