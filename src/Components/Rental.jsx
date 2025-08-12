@@ -8,7 +8,7 @@ const Rental = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [properties, setProperties] = useState([]);
 
-  // Fetch data from backend
+  
   useEffect(() => {
     AOS.init();
     axios

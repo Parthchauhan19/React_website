@@ -25,10 +25,19 @@ const TeamSection = () => {
   };
 
   const professionalImages = [
-    "https://randomuser.me/api/portraits/men/10.jpg",
+    "https://randomuser.me/api/portraits/men/18.jpg",
     "https://randomuser.me/api/portraits/men/19.jpg",
+    "https://randomuser.me/api/portraits/men/17.jpg",
     "https://randomuser.me/api/portraits/men/35.jpg",
     "https://randomuser.me/api/portraits/men/32.jpg",
+    // "https://randomuser.me/api/portraits/men/47.jpg",
+    // "https://randomuser.me/api/portraits/men/59.jpg",
+    // "https://randomuser.me/api/portraits/men/23.jpg",
+    // "https://randomuser.me/api/portraits/men/63.jpg",
+    // "https://randomuser.me/api/portraits/men/77.jpg",
+    // "https://randomuser.me/api/portraits/men/81.jpg",
+    // "https://randomuser.me/api/portraits/men/94.jpg",
+    // "https://randomuser.me/api/portraits/men/07.jpg",
   ];
 
   const TeamRow = ({ members }) => (
@@ -37,7 +46,7 @@ const TeamSection = () => {
         <div
           data-aos="fade-up"
           key={member.id}
-          className="bg-white rounded-lg shadow-md hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300"
+          className="bg-white rounded-lg shadow-md hover:shadow-xl  hover:scale-102"
           style={{ width: "280px", height: "440px" }}
         >
           <div className="p-6 text-center h-full flex flex-col justify-between">
@@ -47,7 +56,7 @@ const TeamSection = () => {
                 e.target.src = "/default-profile.png";
               }}
               alt="Team Member"
-              className="w-24 h-24 mx-auto mb-6 rounded-full object-cover shadow-sm"
+              className="w-35 h-35 mx-auto mb-6 rounded-4xl object-cover shadow-md shadow-red-500 transition-transform duration-300 ease-out hover:scale-105"
             />
 
             <h3 className="text-xl font-semibold mb-2 text-red-500">
@@ -68,11 +77,14 @@ const TeamSection = () => {
             </p>
 
             <p className="flex items-center justify-center gap-2 text-gray-600 text-sm leading-relaxed px-2 mb-6">
-              <LocationEdit className="w-4 h-4 text-green-600" strokeWidth={2} />
+              <LocationEdit
+                className="w-4 h-4 text-green-600"
+                strokeWidth={2}
+              />
               {member.Address}
             </p>
 
-            <button className="bg-red-500 hover:bg-red-600 text-white px-6 py-2 rounded-md font-medium text-sm">
+            <button className="bg-red-500 hover:bg-red-600 text-white px-6 py-2 rounded-md font-medium text-sm transition-colors duration-300 ease-out">
               View Profile
             </button>
           </div>
@@ -104,8 +116,8 @@ const TeamSection = () => {
           </p>
         ) : (
           <>
-            <TeamRow members={teamMembers.slice(0, 4)} />
-            {teamMembers.length > 4 && (
+            <TeamRow members={teamMembers.slice(0, 12)} />
+            {teamMembers.length > 12 && (
               <TeamRow members={teamMembers.slice(4)} />
             )}
           </>
