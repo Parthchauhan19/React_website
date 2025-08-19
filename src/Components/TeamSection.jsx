@@ -25,19 +25,19 @@ const TeamSection = () => {
   };
 
   const professionalImages = [
-    "https://randomuser.me/api/portraits/men/18.jpg",
+    "https://randomuser.me/api/portraits/men/89.jpg",
     "https://randomuser.me/api/portraits/men/19.jpg",
     "https://randomuser.me/api/portraits/men/17.jpg",
     "https://randomuser.me/api/portraits/men/35.jpg",
     "https://randomuser.me/api/portraits/men/32.jpg",
-    // "https://randomuser.me/api/portraits/men/47.jpg",
-    // "https://randomuser.me/api/portraits/men/59.jpg",
-    // "https://randomuser.me/api/portraits/men/23.jpg",
-    // "https://randomuser.me/api/portraits/men/63.jpg",
-    // "https://randomuser.me/api/portraits/men/77.jpg",
-    // "https://randomuser.me/api/portraits/men/81.jpg",
-    // "https://randomuser.me/api/portraits/men/94.jpg",
-    // "https://randomuser.me/api/portraits/men/07.jpg",
+    "https://randomuser.me/api/portraits/men/47.jpg",
+    "https://randomuser.me/api/portraits/men/59.jpg",
+    "https://randomuser.me/api/portraits/men/23.jpg",
+    "https://randomuser.me/api/portraits/men/63.jpg",
+    "https://randomuser.me/api/portraits/men/77.jpg",
+    "https://randomuser.me/api/portraits/men/81.jpg",
+    "https://randomuser.me/api/portraits/men/94.jpg",
+    "https://randomuser.me/api/portraits/men/07.jpg",
   ];
 
   const TeamRow = ({ members }) => (
